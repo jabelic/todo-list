@@ -1,0 +1,69 @@
+
+body{
+    background: #00bbff;
+}
+
+h1 {
+    /*線の種類（二重線）太さ 色*/
+    border-bottom: double 5px #FFC778;
+    text-align: center;
+}
+
+
+.add{
+    color: azure;
+    text-align: center;
+}
+
+
+input[type="text"],
+input[type="submit"]{
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: none;
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    transition-duration: 0.1s; /* 0.1秒間動く*/
+    transition-property: color;
+    vertical-align: middle;
+    margin: 0 0px 0px 0;
+    *margin-right:0px; 
+    top:0px;
+}
+
+
+input[type="text"]{
+    width: 90%; /*横幅*/
+}
+
+
+input[type="text"]:hover{
+    transition-property: background-color;
+    background-color: #bbffff;
+    box-shadow:0 0 10px #FF1493;
+}
+
+input[type="text"]:focus{
+    transition-property: background-color;
+    background-color: #bbffff;
+    box-shadow:0 0 4px #FF1493;
+}
+
+input[type="submit"]{
+    background: #999999;
+    width: 10%; /*横幅*/
+    float:right;
+}
+
+input[type="submit"]:hover {
+    /* マウスが載ったとき */
+    background-image: linear-gradient(0deg, #bbffff, #e5f4fc);
+    border-radius: 3px; /*ボックス角の丸み*/
+}
+input[type="submit"]:active {
+    /* クリックされたとき */
+    background-image: linear-gradient(180deg, #bbffff, #e5f4fc);
+    border-radius: 3px; /*ボックス角の丸み*/
+}
+
+ 

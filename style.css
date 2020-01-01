@@ -17,7 +17,8 @@ h1 {
 
 
 input[type="text"],
-input[type="submit"]{
+input[type="submit"],
+button{
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
     border-radius: 3px; /*ボックス角の丸み*/
@@ -33,7 +34,7 @@ input[type="submit"]{
 
 
 input[type="text"]{
-    width: 90%; /*横幅*/
+    width: 85%; /*横幅*/
 }
 
 
@@ -49,18 +50,20 @@ input[type="text"]:focus{
     box-shadow:0 0 4px #FF1493;
 }
 
-input[type="submit"]{
+input[type="submit"],button{
     background: #999999;
     width: 10%; /*横幅*/
     float:right;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:hover{
     /* マウスが載ったとき */
     background-image: linear-gradient(0deg, #bbffff, #e5f4fc);
     border-radius: 3px; /*ボックス角の丸み*/
 }
-input[type="submit"]:active {
+input[type="submit"]:active,
+button:active{
     /* クリックされたとき */
     background-image: linear-gradient(180deg, #bbffff, #e5f4fc);
     border-radius: 3px; /*ボックス角の丸み*/

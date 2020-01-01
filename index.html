@@ -17,9 +17,9 @@
  
     <form action="#" class="add">
             <input type="text"　id="task" placeholder="テキストを入力">
-            <input type="submit" onClick="submitItem();" value="Add">
+            <input type="submit" value="Add" id="submit-button">
             
-            <button onClick="submitItem();">追加</botton>
+            <!--button onClick="submitItem();">追加</botton-->
     </form>
 
     <div>
@@ -27,7 +27,13 @@
     </div>
 
 </div>
-<script src="app.js"></script>
+<script src="app.js">
+document.addEventListener('readystatechange', function() {
+    if (document.readyState === "complete") {
+        submitItem();
+    }
+});
+</script>
 </body>
 
 </html>

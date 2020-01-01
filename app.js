@@ -1,8 +1,7 @@
 
 function submitItem(){
     var tasks = [];
-    var task = document.getElementById('task').value;
-    tasks.push(task);
+    tasks.push(document.getElementById('task').value);
     for(var i=0; i< tasks.length; i++){
         var li = document.createElement("li");
         li.textContent = tasks[i];
@@ -10,7 +9,11 @@ function submitItem(){
     }
 }
 
-
+document.addEventListener('readystatechange', function() {
+    if (document.readyState === "complete") {
+      submitItem();
+    }
+});
 
 
 

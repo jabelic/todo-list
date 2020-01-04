@@ -1,6 +1,7 @@
 
 body{
     background: #00bbff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
@@ -18,6 +19,7 @@ h1 {
 
 input[type="text"],
 input[type="submit"],
+input[type="button"],
 button{
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
@@ -68,5 +70,31 @@ button:active{
     background-image: linear-gradient(180deg, #bbffff, #e5f4fc);
     border-radius: 3px; /*ボックス角の丸み*/
 }
+ul {
+    list-style: none;
+    padding-left: 0%;
+  }
 
- 
+.container li{
+    background-color: skyblue;
+    text-align: center;
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: none;
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    margin: 3px;
+}
+
+ /* 追加 */
+.todos li {
+    background: #2c4b79;
+}
+
+/* 追加 */
+.delete {
+    cursor: pointer;
+    color: orange;
+}
+
+

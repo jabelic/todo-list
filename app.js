@@ -1,28 +1,51 @@
 
 
+var newTag = function(tag){
+    var elem = document.createElement(tag);
+    for (var i=0; i<arguments.length; i++){
+        elem.appendChild(arguments[i]);
+    }
+    return elem;
+};
+
+var newText = function (text) {
+    return document.createTextNode(text);
+};
+
+
 function submitItem() {
     var tasks = [];
     var task = document.getElementById('task');
-
     var taskContent = task.value;
-
 
     console.log(`入力欄の値: ${taskContent}`);
     tasks.push(taskContent);
     for (var j = 0; j < tasks.length; j++) {
-        var li = document.createElement("li");
-        li.textContent = tasks[i];
-        document.getElementById("todo-list").appendChild(li);
+        const li = document.createElement("li");
+        li.classList.add("list-group-item");
+        li.classList.add("d-flex");
+        li.classList.add("justify-content-between");
+        li.classList.add("align-items-center");
+        li.textContent = tasks[j];
         var i = document.createElement("i");
-        i.setAttribute("class", "far fa-trash-alt delete");
-        document.getElementById("li").appendChild(i);
+        i.classList.add("far");
+        i.classList.add("fa-trash-alt");
+        i.classList.add("del");
+        li.appendChild(i);
+        document.getElementById("todo-list").appendChild(li);
+        /*
+        var i = document.createElement("i");
+        i.classList.add("far");
+        i.classList.add("fa-trash-alt");
+        i.classList.add("del");
+        li.appendChild(i);*/
     }
-
 }
 
 
-function reset() {
 
+
+function reset() {
     var reset_target = document.getElementById("text");
 
     if (reset_target.value == '') {
@@ -31,6 +54,29 @@ function reset() {
         reset_target.value = '';
     }
 };
+
+// 削除ボタンが押されたら発動
+function remove(){
+    var id = this.getAttribute('id');
+    todos.splice(id, 1);
+    show();
+}
+
+/*
+const addTask = document.querySelector('.add');
+const list = document.querySelector('.todos');
+
+const createTodoList = task => {
+    // HTML テンプレートを生成
+    const html = `
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${task}</span>
+        <i class="far fa-trash-alt delete"></i>
+    </li>
+    `;
+
+    list.innerHTML += html;
+}*/
 
 
 

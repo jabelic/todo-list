@@ -64,37 +64,44 @@ button:hover{
     background-image: linear-gradient(0deg, #bbffff, #e5f4fc);
     border-radius: 3px; /*ボックス角の丸み*/
 }
+
 input[type="submit"]:active,
 button:active{
     /* クリックされたとき */
     background-image: linear-gradient(180deg, #bbffff, #e5f4fc);
     border-radius: 3px; /*ボックス角の丸み*/
 }
+
 ul {
     list-style: none;
     padding-left: 0%;
   }
 
 .container li{
+    max-width: 400px;
     background-color: skyblue;
     text-align: center;
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
     border-radius: 3px; /*ボックス角の丸み*/
-    border: none;
     box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
-    margin: 3px;
+    margin: auto;
+    margin-top:3px;
+    width: 85%; /*横幅*/
 }
 
  /* 追加 */
+ 
 .todos li {
-    background: #2c4b79;
+    background: #74c261;
 }
 
 /* 追加 */
-.delete {
+.del {
     cursor: pointer;
     color: orange;
+    position: relative;
+    left: 10px;
 }
 
 

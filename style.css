@@ -88,6 +88,7 @@ ul {
     margin: auto;
     margin-top:3px;
     width: 85%; /*横幅*/
+    display: flex;
 }
 
  /* 追加 */
@@ -104,4 +105,12 @@ ul {
     left: 10px;
 }
 
+/* checkbox */
+.btn{
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    margin:auto;
+    left: 10px;
+}
 

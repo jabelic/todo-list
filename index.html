@@ -23,13 +23,13 @@
         </header>
 
 
-        <form action="#" class="add">
+        <form action="#" class="add" name="manu">
             <input type="text" id="task" placeholder="テキストを入力">
             <input type="submit" value="Add" id="submit-button" onclick="submitItem();reset();">
 
             <!--button onClick="submitItem();">追加</botton-->
+            <input type="button" value="Delete checked task" id="delbutton" onclick="delchecked();">
         </form>
-        <input type="button" value="Delete" id="delbutton" onclick="delchecked();">
 
         <div>
             <ul id="todo-list" class="todos"></ul>
